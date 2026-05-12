@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Like Button</title>
+  <style>
+    .like-btn {
+      font-size: 40px;
+      color: #aaa;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+    .liked {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Instagram Like ❤️ Example</h2>
+  <span id="heart" class="like-btn">🤍</span>
+
+  <script>
+    const heart = document.getElementById("heart");
+
+    heart.addEventListener("click", function () {
+      if (heart.classList.contains("liked")) {
+        heart.classList.remove("liked");
+        heart.textContent = "🤍"; // unliked
+      } else {
+        heart.classList.add("liked");
+        heart.textContent = "❤️"; // liked
+      }
+    });
+  </script>
+
+</body>
+</html>
